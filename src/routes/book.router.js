@@ -9,5 +9,7 @@ bookRouter.get("/", bookController.getBooks);
 
 // menggunakan middleware
 bookRouter.post("/", authMiddleware.authMiddleware, bookController.createBook);
+bookRouter.patch("/", bookController.updateBook);
+bookRouter.delete("/:id", bookController.deleteBook);
 
 module.exports = bookRouter;
